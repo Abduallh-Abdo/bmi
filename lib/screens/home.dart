@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurple,
-        title: Text(
+        title: const Text(
           'Body Mass Index',
           style: TextStyle(
             fontSize: 25,
@@ -293,30 +293,30 @@ class _HomeState extends State<Home> {
                 showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: Text('Your BMI'),
+                    title: const Text('Your BMI'),
                     backgroundColor: Colors.purple,
-                    contentPadding: EdgeInsets.all(20),
-                    content: Container(
+                    contentPadding: const EdgeInsets.all(20),
+                    content: SizedBox(
                       height: 120,
                       child: Column(
                         children: [
                           Text(
                             'Gender: ${isMale ? 'Male' : 'Female'}',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 24,
                               color: Colors.white,
                             ),
                           ),
                           Text(
                             'Age: $age',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 24,
                               color: Colors.white,
                             ),
                           ),
                           Text(
                             'Result: ${result.round()}',
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 24,
                               color: Colors.white,
                             ),
@@ -327,7 +327,7 @@ class _HomeState extends State<Home> {
                   ),
                 );
               },
-              child: Text(
+              child: const Text(
                 'Calculate',
                 style: TextStyle(
                   fontSize: 24,
